@@ -1,400 +1,415 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=PT+Serif:ital@1&display=swap");
 * {
-    margin: 0;
-    font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
-/* ---------------- Pseudo clase :is ---------------- */
-:is(.texto-carrusel, .servicios, .sitios, .contacto, h3, .galeria, .btn){ /* Sombreado */ 
-    text-shadow: 0 0 7px #030000, 0 0 7px #000000, 0 0 7px #151515;
-}
-:is(.nleft, .item){ /* Centrado y cover imagenes */
-    background-position: center;
-    background-size: cover;
-}
-:is(.servicios, .sitios, .boton, .portfolio){ /* Altura titulos */
-    height: 100px;
-}
-/* ---------------- Variable :root ---------------- */
-:root { /* Color Gris oscuro primario */
-    --color-primario: #060606;
 
+/* ---------------- Pseudo clase :is ---------------- */
+:is(.texto-carrusel, .contacto, .btn, h3, h2, h5, .parrafos-img) {
+  /* Sombreado */
+  text-shadow: 0 0 7px #000000, 0 0 7px #202020;
 }
-:root {  /* Color rojo secundario */
-    --color-secundario: #5d1919;
+
+:is(.nleft, .item) {
+  /* Centrado y cover imagenes */
+  background-position: center;
+  background-size: cover;
 }
+
+/* ---------------- Variable :root ---------------- */
+:root {
+  /* Color Gris oscuro primario */
+  --color-primario: #060606;
+}
+
+/* ---------------- $Variable ---------------- */
 /* Botones */
 .btn {
-    background-color: var(--color-secundario);
-    padding: 7px 25px 8px 25px;
-    border: solid 1px #222222;
-    border-radius: 14px;
-    font-weight: bold;
-} 
+  background-color: #5d1919;
+  padding: 7px 25px 8px 25px;
+  border: solid 1px #222222;
+  border-radius: 14px;
+  font-weight: bold;
+}
+
 /* ---------------- Inicia barra de navegacion ---------------- */
-.navbar ul{
-    padding-left: 18px;
-}
 .navbar {
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.626);
-    z-index: 999;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.837);
 }
-.navbar-brand {
-    font-family: 'PT Serif', serif;
-    padding-left: 18px;
-    font-weight: bold;
-    font-size: 22px;
-    color: rgb(255, 255, 255) !important;
+.navbar ul {
+  padding-left: 18px;
 }
-aside{
-    font-family: 'PT Serif', serif;
+.navbar ul a:hover {
+  color: rgb(159, 17, 17) !important;
 }
-span {
-    font-family: 'PT Serif', serif;
-    font-weight: bold;
-    padding-left: 5px;
-    color: var(--color-secundario);
-    font-size: 24px;
+.navbar .navbar-brand {
+  font-family: "PT Serif", serif;
+  padding-left: 18px;
+  font-weight: bold;
+  font-size: 22px;
+  color: rgb(255, 255, 255) !important;
 }
-.nav-link {
-    color: white !important;
-    font-size: 18px;
+.navbar aside {
+  font-family: "PT Serif", serif;
 }
-nav li a:hover{
-    color: rgb(159, 17, 17)!important;
+.navbar span {
+  font-family: "PT Serif", serif;
+  font-weight: bold;
+  padding-left: 5px;
+  color: #5d1919;
+  font-size: 24px;
 }
-.navbar-toggler{
-    border: none !important; /* Saco el borde del boton hamburguesa */
+.navbar .nav-link {
+  color: white !important;
+  font-size: 18px;
 }
-.navbar-toggler:focus{
-    box-shadow: none !important; /* Saco el borde del boton hamburguesa cuando lo clickeas */
+.navbar .navbar-toggler {
+  border: none !important;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
 /* Finalinza barra de navegacion */
 /*  ---------------- Inicia carrusel ---------------- */
-.carrusel{
-    height: 650px;
-    object-fit: cover;
+.carrusel {
+  height: 650px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.texto-carrusel{
-    top: 35%;
+
+.texto-carrusel {
+  top: 35%;
 }
+
 /* Finaliza carrusel */
 /* ---------------- Inicia Nuestros Servicios ---------------- */
-.icon{
-    color: var(--color-secundario);
-    font-size: 40px;  
-}
-.featured-services{
-    background-color: var(--color-primario);
+.featured-services {
+  background-color: var(--color-primario);
 }
 .featured-services .icon-box {
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-    transition: all 0.3s;
-    border-radius: 8px;
-    z-index: 1;
-    border-radius: 30px;
+  background-color: #000000;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s;
+  border-radius: 8px;
+  z-index: 1;
+  border-radius: 30px;
+}
+.featured-services .icon-box .icon {
+  color: #5d1919;
+  font-size: 40px;
+}
+.featured-services .icon-box .icon .icon i {
+  font-size: 50px;
+  line-height: 1;
+  color: #5d1919;
+  transition: all 0.3s ease-in-out;
+}
+.featured-services .icon-box .icon .icon i .description {
+  font-size: 15px;
+  line-height: 28px;
 }
 .featured-services .icon-box::before {
-    content: "";
-    position: absolute;
-    background-color: #b68181;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 100%;
-    transition: all 0.4s;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  background-color: #b68181;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.4s;
+  z-index: -1;
 }
 .featured-services .icon-box:hover::before {
-    background: #871515;
-    top: 0;
-    border-radius: 30px;
-}
-.featured-services .icon i {
-    font-size: 50px;
-    line-height: 1;
-    color: var(--color-secundario);
-    transition: all 0.3s ease-in-out;
+  background: #871515;
+  top: 0;
+  border-radius: 30px;
 }
 .featured-services .title {
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
-.featured-services .description {
-    font-size: 15px;
-    line-height: 28px;
-}
-.icon-box{
-    background-color: #000000;
-}
-.servicios{
-    background-color: var(--color-primario);
-}
+
 /* Finaliza Nuestros Servicios */
 /* ---------------- Inicia Nosotros ---------------- */
 .nosotros .nleft {
-    background-image: url(../img/programadores1.jpg);
-    filter:grayscale(70%);
-    height: 480px;
-    width: 100%;
+  background-image: url(../img/programadores1.jpg);
+  filter: grayscale(70%);
+  height: 480px;
+  width: 100%;
 }
 .nosotros .nright {
-    padding: 20px;
-    width: 100%;
-    background-color: var(--color-primario);
+  padding: 20px;
+  width: 100%;
+  background-color: var(--color-primario);
 }
+
 /* Finaliza Nosotros */
 /* ---------------- Inicia Sitios web clientes ---------------- */
-.sitios{
-    background-color: var(--color-primario);
+.sitios {
+  background-color: var(--color-primario);
 }
-.galeria1 {
-    background-color: var(--color-primario);
-    height: 920px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 200px);
-    padding: 20px;
-    grid-gap: 20px;
+
+.gallery {
+  background-color: var(--color-primario);
+  padding: 5px;
 }
-.galeria1 a{
-    text-decoration: none;
+.gallery img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-h5 {
-    padding-top: 20px;
+
+.itemimg {
+  border: 3px solid rgb(22, 22, 22);
+  transition: all 0.8s;
+  filter: brightness(70%);
 }
-.parrafos-img {
-    padding-top: 100px;
+
+.itemimg:hover {
+  transform: scale(0.9);
+  filter: brightness(130%);
 }
+
 /* Finaliza Sitios web clientes */
 /* ---------------- Inicia contacto - ayuda ---------------- */
 .contacto {
-    background-image: url(../img/f2.jpg);
-    background-position: bottom;
-    background-size: cover;
-    height: 160px;
+  background-image: url(../img/f2.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 160px;
 }
-.ayuda {
-    padding-top: 20px;
+.contacto .ayuda {
+  padding-top: 20px;
 }
-.bb {
-    padding-top: 5px;
+.contacto .bb {
+  padding-top: 5px;
 }
-.boton{
-    background-color: var(--color-primario);
-}
+
 /* Finaliza contacto - ayuda */
 /* ---------------- Inicia Footer ---------------- */
-footer{
-    background-color: rgb(15, 15, 15);
+footer {
+  background-color: rgb(15, 15, 15);
 }
-footer a{
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
+footer a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
 }
-footer a:hover{
-    color: rgb(159, 17, 17)!important;
+footer a:hover {
+  color: rgb(159, 17, 17) !important;
 }
-footer p{
-    font-size: 17px;
+footer p {
+  font-size: 17px;
 }
-footer i{
-    font-size: 25px;
+footer i {
+  font-size: 25px;
 }
-footer h5{
-    font-weight: bold;
-    color: rgb(136, 67, 67);
+footer h4 {
+  font-weight: bold;
+  color: rgb(136, 67, 67);
 }
+
 /* Finaliza Footer */
 /* ---------------- BOTON SUBIR ---------------- */
 .subir {
-    height: 30px;
-    width: 30px;
-    background-color:var(--color-secundario);
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    font-size: 18px;
-    line-height: 30px;
-    box-shadow: 0 0 5px rgb(0, 0, 0);
-    text-decoration: none;
+  height: 30px;
+  width: 30px;
+  background-color: #5d1919;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  font-size: 18px;
+  line-height: 30px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
+  text-decoration: none;
 }
+
 /* Finaliza Boton Subir */
 /* ---------------- Inicio de media queries ---------------- */
 @media only screen and (min-width: 576px) {
-    .galeria {
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: repeat(4, 200px) !important;
-    }
-    .galeria1 {
-        grid-template-columns: 1fr 1fr !important;
-        grid-template-rows: repeat(4, 200px) !important;
-        height: 480px;
-    }
-    .nosotros .nleft {
-        width: 50%;
-    }
-    .nosotros .nright {
-        width: 50%;
-    }
-    .ayuda {
-        padding-left: 50px;
-        padding-top: 40px;
-    }
-    .bb {
-        padding-right: 50px;
-        padding-top: 60px;
-    }
+  .galeria {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(4, 200px) !important;
+  }
+  .nosotros .nleft {
+    width: 50%;
+  }
+  .nosotros .nright {
+    width: 50%;
+  }
+  .contacto .ayuda {
+    padding-left: 50px;
+    padding-top: 40px;
+  }
+  .contacto .bb {
+    padding-right: 50px;
+    padding-top: 60px;
+  }
 }
-@media only screen and (min-width: 768px) and (max-width:1023px) {
-    .galeria {
-        grid-template-columns: repeat(3, 1fr) !important;
-        grid-row: repeat(2, 200px) !important;
-    }
-    .galeria1 {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-row: repeat(2, 200px) !important;
-    }
-    .item1 {
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    .item2 {
-        grid-column: 2/4;
-        grid-row: 1/2;
-    }
-    .item3 {
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    .item4 {
-        grid-column: 2/4;
-        grid-row: 2/3;
-    }
-    .item5 {
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
-    .item6 {
-        grid-column: 3/4;
-        grid-row: 3/5;
-    }
-    .item7 {
-        grid-column: 1/2;
-        grid-row: 4/5;
-    }
-    .item8 {
-        grid-column: 2/3;
-        grid-row: 4/5;
-    }
-    .ayuda {
-        padding-right: 100px;
-    }
-    .bb {
-        padding-left: 100px;
-    }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .galeria {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-row: repeat(2, 200px) !important;
+  }
+  .item1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .item2 {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+  .item3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .item4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .item5 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .item6 {
+    grid-column: 3/4;
+    grid-row: 3/5;
+  }
+  .item7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .item8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .contacto .ayuda {
+    padding-right: 100px;
+  }
+  .contacto .bb {
+    padding-left: 100px;
+  }
 }
 @media only screen and (min-width: 1024px) {
-    .galeria {
-        grid-template-columns: repeat(3, 1fr) !important;
-        grid-template-rows: 250px 250px 250px !important;
-    }
-    .galeria1 {
-        grid-template-columns: repeat(4, 1fr) !important;
-        grid-template-rows: 250px 250px !important;
-        height: 300px;
-    }
-    .item6 {
-        grid-column: 2/4;
-        grid-row: 3/4;
-    }
-    h5 {
-        padding-top: 20px;
-    }
-    .parrafos-img {
-        padding-top: 140px;
-    }  
-    .ayuda {
-        padding-right: 230px;
-    }
-    .bb {
-        padding-left: 230px;
-    }
+  .galeria {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: 250px 250px 250px !important;
+  }
+  .item6 {
+    grid-column: 2/4;
+    grid-row: 3/4;
+  }
+  h5 {
+    padding-top: 20px;
+  }
+  .contacto .ayuda {
+    padding-right: 200px;
+  }
+  .contacto .bb {
+    padding-left: 230px;
+  }
 }
 /* Finaliza media queris */
 /* Inician pages */
 /* -------------------------------- Portfolio -------------------------------- */
+.portfolio {
+  background-image: linear-gradient(var(--color-primario), rgb(49, 32, 32));
+}
+
 .galeria {
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 200px);
-    padding: 20px;
-    grid-gap: 20px;
-    background-color: var(--color-primario);
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 200px);
+  padding: 20px;
+  grid-gap: 20px;
 }
-.portfolioh3{
-    background-color: var(--color-primario);
+.galeria a {
+  text-decoration: none;
 }
-.galeria a{
-    text-decoration: none;
+.galeria h5 {
+  padding-top: 20px;
 }
+.galeria .parrafos-img {
+  padding-top: 100px;
+}
+
 .item {
-    border: 3px solid rgb(22, 22, 22);
-    transition: all 0.8s;
-    filter: brightness(70%)
+  border: 3px solid rgb(22, 22, 22);
+  transition: all 0.8s;
+  filter: brightness(70%);
 }
+
 .item:hover {
-    transform: scale(0.9);
-    filter: brightness(130%)
+  transform: scale(0.9);
+  filter: brightness(130%);
 }
-.bg-servicios{
-    background-color: var(--color-primario);
+
+.bg-servicios {
+  background-color: var(--color-primario);
 }
+
 .item1 {
-    background-image: url(../img/4.jpg);
+  background-image: url(../img/4.jpg);
 }
+
 .item2 {
-    background-image: url(../img/f2.jpg);
+  background-image: url(../img/f2.jpg);
 }
+
 .item3 {
-    background-image: url(../img/f3.jpg);
+  background-image: url(../img/f3.jpg);
 }
+
 .item4 {
-    background-image: url(../img/f4.jpg);
+  background-image: url(../img/f4.jpg);
 }
+
 .item5 {
-    background-image: url(../img/f10.jpg);
+  background-image: url(../img/f10.jpg);
 }
+
 .item6 {
-    background-image: url(../img/f13.jpg);
+  background-image: url(../img/f13.jpg);
 }
+
 .item7 {
-    background-image: url(../img/f14.jpg);
+  background-image: url(../img/f14.jpg);
 }
+
 .item8 {
-    background-image: url(../img/2.jpg);
+  background-image: url(../img/2.jpg);
 }
+
 /* Cierra portoflio */
 /* -------------------------------- Contacto y formulario -------------------------------- */
-.span-form{
-    font-size: 16px;
+.span-form {
+  font-size: 16px;
 }
-.bg-form{
-    background-color: #171717;
+
+.bg-form {
+  background-image: linear-gradient(rgb(15, 14, 14), rgb(38, 38, 38));
 }
-.bg-contacto{
-    background-color: var(--color-primario);
+
+.bg-contacto {
+  background-color: var(--color-primario);
 }
+
 /* Cierre contacto y formulario */
 /* -------------------------------- Nosotros -------------------------------- */
-.bg-nosotros{
-    background-color: var(--color-primario);
+.bg-nosotros {
+  background-color: var(--color-primario);
 }
+
 /* Cierra Nosotros */
+/*# sourceMappingURL=style.css.map */
