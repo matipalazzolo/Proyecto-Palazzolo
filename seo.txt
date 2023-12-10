@@ -1,0 +1,5 @@
+Mejoras SEO:
+-Correccion de faltas de ortografia
+-Agregado de titulos para cada seccion
+-Agregado de etiquetas <meta>
+-Correccion de orden de titulos
