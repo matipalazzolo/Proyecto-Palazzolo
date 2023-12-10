@@ -1,0 +1,21 @@
+footer {
+  background-color: rgb(15, 15, 15);
+}
+footer a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+footer a:hover {
+  color: rgb(159, 17, 17) !important;
+}
+footer p {
+  font-size: 17px;
+}
+footer i {
+  font-size: 25px;
+}
+footer h4 {
+  font-weight: bold;
+  color: rgb(136, 67, 67);
+}/*# sourceMappingURL=footer.css.map */

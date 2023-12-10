@@ -1,0 +1,44 @@
+.contacto {
+    background-image: url(../img/f2.jpg);
+    background-position: bottom;
+    background-size: cover;
+    height: 160px;
+
+    .ayuda {
+        padding-top: 20px;
+    }
+
+    .bb {
+        padding-top: 5px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .contacto .ayuda {
+        padding-left: 50px;
+        padding-top: 40px;
+    }
+
+    .contacto .bb {
+        padding-right: 50px;
+        padding-top: 60px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .contacto .ayuda {
+        padding-right: 100px;
+    }
+
+    .contacto .bb {
+        padding-left: 100px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .contacto .ayuda {
+        padding-right: 200px;
+    }
+
+    .contacto .bb {
+        padding-left: 230px;
+    }
+}

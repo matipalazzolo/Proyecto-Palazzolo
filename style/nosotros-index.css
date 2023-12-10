@@ -1,0 +1,20 @@
+.nosotros .nleft {
+  background-image: url(../img/programadores1.jpg);
+  filter: grayscale(70%);
+  height: 480px;
+  width: 100%;
+}
+.nosotros .nright {
+  padding: 20px;
+  width: 100%;
+  background-color: var(--color-primario);
+}
+
+@media only screen and (min-width: 576px) {
+  .nosotros .nleft {
+    width: 50%;
+  }
+  .nosotros .nright {
+    width: 50%;
+  }
+}/*# sourceMappingURL=nosotros-index.css.map */

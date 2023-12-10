@@ -1,0 +1,47 @@
+.navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.837);
+
+    ul {
+        padding-left: 18px;
+
+        a:hover {
+            color: rgb(159, 17, 17) !important;
+        }
+    }
+
+    .navbar-brand {
+        font-family: "PT Serif", serif;
+        padding-left: 18px;
+        font-weight: bold;
+        font-size: 22px;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    aside {
+        font-family: "PT Serif", serif;
+    }
+
+    span {
+        font-family: "PT Serif", serif;
+        font-weight: bold;
+        padding-left: 5px;
+        color: #5d1919;
+        font-size: 24px;
+    }
+
+    .nav-link {
+        color: white !important;
+        font-size: 18px;
+    }
+
+    .navbar-toggler {
+        border: none !important;
+
+        &:focus {
+            box-shadow: none !important;
+        }
+    }
+}
